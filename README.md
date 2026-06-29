@@ -69,12 +69,7 @@ Since you are new to Git, here are the exact terminal commands to upload this di
    - **Branch:** `main`
    - **Runtime:** `Docker` *(Render will automatically find your root `Dockerfile` and build it!)*
 5. Click **Advanced** and add the following **Environment Variables**:
-   - Key: `PORT` | Value: `5000`
-   - Key: `DB_HOST` | Value: `79.72.15.113`
-   - Key: `DB_PORT` | Value: `1521`
-   - Key: `DB_USERNAME` | Value: `APPS`
-   - Key: `DB_PASSWORD` | Value: `NoGa#8284#8209`
-   - Key: `DB_SERVICE_NAME` | Value: `LSPREP_PDB1.PUBLIC.VCNPREPRODPUB.ORACLEVCN.COM`
+   -
 6. Scroll down and click **Create Web Service**.
    - *Render will start downloading the Node base image, install the Oracle Linux client libraries, copy your spreadsheets, compile the TypeScript backend, and start the server.*
    - Once successfully deployed, copy your backend's **Onrender URL** from the top-left of the page (e.g., `https://item-request-api.onrender.com`).
