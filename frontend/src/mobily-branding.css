@@ -1,0 +1,274 @@
+/* mobily-branding.css - Mobily Brand Stylesheet for React App */
+
+@font-face {
+  font-family: 'Mobily Headline';
+  src: url('/fonts/Mobily_Headline_v6-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mobily Headline';
+  src: url('/fonts/Mobily_Headline_v6-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mobily Text';
+  src: url('/fonts/Mobily_Text_v6-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mobily Text';
+  src: url('/fonts/Mobily_Text_v6-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+:root {
+  /* Brand colors */
+  --mobily-blue: #005CB9;
+  --mobily-bright-blue: #00ADEF;
+  --mobily-dark-blue: #0A2540;
+  --mobily-light-bg: #F4F7FA;
+  --mobily-white: #FFFFFF;
+
+  /* Status and semantic colors */
+  --mobily-warning: #FFB800;
+  --mobily-danger: #D9381E;
+  --mobily-success: #28A745;
+  --mobily-gray-border: #D0D5DD;
+  --mobily-gray-text: #667085;
+
+  /* Typography */
+  --font-headline: 'Mobily Headline', 'Helvetica Neue', Arial, sans-serif;
+  --font-text: 'Mobily Text', Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font-text);
+  background-color: var(--mobily-light-bg);
+  color: var(--mobily-dark-blue);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headline);
+  font-weight: bold;
+  color: var(--mobily-dark-blue);
+}
+
+/* Navbar */
+.mobily-navbar {
+  background-color: var(--mobily-white);
+  border-bottom: 3px solid var(--mobily-blue);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.mobily-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mobily-logo {
+  height: 42px;
+  width: auto;
+}
+
+.mobily-portal-title {
+  font-family: var(--font-headline);
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--mobily-blue);
+}
+
+/* Cards & Layout */
+.mobily-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.mobily-card {
+  background-color: var(--mobily-white);
+  border-radius: 8px;
+  border: 1px solid var(--mobily-gray-border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+/* Forms */
+.mobily-form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mobily-label {
+  font-family: var(--font-headline);
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--mobily-dark-blue);
+}
+
+.mobily-input, .mobily-select, .mobily-textarea {
+  font-family: var(--font-text);
+  font-size: 14px;
+  padding: 10px 12px;
+  border: 1px solid var(--mobily-gray-border);
+  border-radius: 6px;
+  outline: none;
+  background-color: #FCFDFE;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.mobily-input:focus, .mobily-select:focus, .mobily-textarea:focus {
+  border-color: var(--mobily-blue);
+  box-shadow: 0 0 0 3px rgba(0, 92, 185, 0.15);
+  background-color: var(--mobily-white);
+}
+
+/* Buttons */
+.mobily-btn {
+  font-family: var(--font-headline);
+  font-weight: bold;
+  font-size: 14px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s, opacity 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.mobily-btn:active {
+  transform: scale(0.98);
+}
+
+.mobily-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.mobily-btn-primary {
+  background-color: var(--mobily-blue);
+  color: var(--mobily-white);
+}
+
+.mobily-btn-primary:hover:not(:disabled) {
+  background-color: #004b96;
+}
+
+.mobily-btn-secondary {
+  background-color: var(--mobily-white);
+  color: var(--mobily-blue);
+  border: 1px solid var(--mobily-blue);
+}
+
+.mobily-btn-secondary:hover:not(:disabled) {
+  background-color: rgba(0, 92, 185, 0.05);
+}
+
+.mobily-btn-danger {
+  background-color: var(--mobily-danger);
+  color: var(--mobily-white);
+}
+
+.mobily-btn-danger:hover:not(:disabled) {
+  background-color: #b52914;
+}
+
+/* Status Badges */
+.mobily-badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-headline);
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+
+.mobily-badge-draft { background-color: #EAECF0; color: #344054; }
+.mobily-badge-submitted { background-color: #EFF8FF; color: #175CD3; }
+.mobily-badge-under_review { background-color: #F9F5FF; color: #6941C6; }
+.mobily-badge-approved { background-color: #ECFDF3; color: #027A48; }
+.mobily-badge-approved_not_sync { background-color: #FEF0C7; color: #B54708; border: 1px solid #FEDF89; }
+.mobily-badge-rejected { background-color: #FEF3F2; color: #B42318; }
+.mobily-badge-published { background-color: #E6F4EA; color: var(--mobily-success); border: 1px solid var(--mobily-success); }
+.mobily-badge-failed { background-color: #FDF2F0; color: var(--mobily-danger); }
+
+/* Warning panels */
+.mobily-alert {
+  padding: 14px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mobily-alert-warning {
+  background-color: #FFF9E6;
+  border-left: 4px solid var(--mobily-warning);
+  color: #8A6100;
+}
+
+.mobily-alert-danger {
+  background-color: #FDF2F0;
+  border-left: 4px solid var(--mobily-danger);
+  color: var(--mobily-danger);
+}
+
+/* Timeline */
+.mobily-timeline {
+  border-left: 3px solid #E4E7EC;
+  padding-left: 20px;
+  position: relative;
+  margin-top: 15px;
+}
+
+.mobily-timeline-item {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.mobily-timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -26px;
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--mobily-blue);
+  border: 2px solid var(--mobily-white);
+  box-shadow: 0 0 0 2px #E4E7EC;
+}
+
+.mobily-timeline-time {
+  font-size: 12px;
+  color: var(--mobily-gray-text);
+  margin-bottom: 2px;
+}
+
+.mobily-timeline-content {
+  font-size: 14px;
+  font-weight: 500;
+}
